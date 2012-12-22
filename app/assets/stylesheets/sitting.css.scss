@@ -1,0 +1,55 @@
+// Place all the styles related to the sitting controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form {
+  vertical-align: top;
+}
+
+.formField {
+  display: inline-block;
+  height: 65px;
+  margin: 10px;
+  vertical-align: top;
+  position: relative;
+}
+
+.formCheckbox {
+  display: inline-block;
+  height: 65px;
+  margin: 10px;
+  vertical-align: top;
+  position: relative;
+  text-align: center;
+  width: 130px;
+}
+
+.formButton {
+  position: absolute;
+  bottom: 15px;
+  width: 100px;
+}
+
+.sittingName, .sittingProject {
+  display: inline-block;
+  width: 220px;
+  margin: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.sittingCollaborate, .sittingCoach {
+  display: inline-block;
+  width: 130px;
+  margin: 10px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.sittingDestroy {
+  display: inline-block;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  vertical-align: top;
+}

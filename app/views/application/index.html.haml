@@ -1,0 +1,8 @@
+.header
+  %h2 Hack Session
+  %hr
+
+.newSittingForm
+  = render :partial => 'sittings/new_sitting_form'
+.sittingList
+  = render :partial => 'sittings/attendee', collection: @attendees

@@ -1,0 +1,17 @@
+.form
+  = form_for(Sitting.new) do |f|
+    .formField
+      = f.label "Your Name"
+      = f.text_field :person
+    .formField
+      = f.label "What Are You Working On?"
+      = f.text_field :project
+    .formCheckbox
+      = f.label "Want Collaborators?"
+      = f.check_box :collaborate
+    .formCheckbox
+      = f.label "Willing to Coach?"
+      = f.check_box :coach
+    .formField
+      .formButton
+        = f.submit "Get Started"
