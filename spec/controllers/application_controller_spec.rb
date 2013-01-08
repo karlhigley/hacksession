@@ -6,12 +6,12 @@ describe ApplicationController do
     it "populates an array of attendees" do
       attendees = FactoryGirl.create(:sitting)
       get :index
-      assigns(:attendees).should eq [attendees]
+      expect(assigns(:attendees)).to eq [attendees]
     end
 
     it "renders the index view" do
       get :index
-      response.should render_template :index
+      expect(response).to render_template :index
     end
   end
 

@@ -6,8 +6,8 @@ describe 'Managing sittings' do
 
     visit root_path
     sittings.each do |sitting|
-      page.should have_content sitting.person
-      page.should have_content sitting.project
+      expect(page).to have_content sitting.person
+      expect(page).to have_content sitting.project
     end
   end
 
@@ -19,8 +19,8 @@ describe 'Managing sittings' do
     fill_in 'sitting_project', :with => attributes[:project]
     click_button 'Get Started'
 
-    page.should have_content attributes[:person]
-    page.should have_content attributes[:project]
+    expect(page).to have_content attributes[:person]
+    expect(page).to have_content attributes[:project]
   end
 
   it 'removes completed sittings' do

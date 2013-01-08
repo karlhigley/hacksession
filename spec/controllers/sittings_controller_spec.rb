@@ -12,7 +12,7 @@ describe SittingsController do
 
       it "redirects to the home page" do
         post :create, sitting: FactoryGirl.attributes_for(:sitting)
-        response.should redirect_to root_url
+        expect(response).to redirect_to root_url
       end
     end
 
@@ -25,7 +25,7 @@ describe SittingsController do
 
       it "redirects to the home page" do
         post :create, sitting: FactoryGirl.attributes_for(:invalid_sitting)
-        response.should redirect_to root_url
+        expect(response).to redirect_to root_url
       end
     end
   end
@@ -43,8 +43,8 @@ describe SittingsController do
 
     it "redirects to the home page" do
       delete :destroy, id: @sitting
-      response.should redirect_to root_url
-      end
+      expect(response).to redirect_to root_url
+    end
   end
 
 end
