@@ -1,5 +1,9 @@
 class SittingsController < ApplicationController
 
+  def index
+    @sittings = Sitting.all
+  end
+
   def create
     Sitting.create(params[:sitting])
     redirect_to root_url

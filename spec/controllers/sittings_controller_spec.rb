@@ -2,6 +2,19 @@ require 'spec_helper'
 
 describe SittingsController do
 
+  describe "GET #index" do
+    it "populates an array of attendees" do
+      sitting = FactoryGirl.create(:sitting)
+      get :index
+      expect(assigns(:sittings)).to eq [sitting]
+    end
+
+    it "renders the index view" do
+      get :index
+      expect(response).to render_template :index
+    end
+  end
+
   describe "POST #create" do
     context "with valid attributes" do
       it "saves the new sitting in the database" do
