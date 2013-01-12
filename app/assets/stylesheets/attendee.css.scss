@@ -1,4 +1,4 @@
-// Place all the styles related to the sitting controller here.
+// Place all the styles related to the attendee controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
@@ -30,7 +30,7 @@
   width: 100px;
 }
 
-.sittingName, .sittingProject {
+.attendeeName, .attendeeProject {
   display: inline-block;
   width: 220px;
   margin: 10px;
@@ -38,7 +38,7 @@
   vertical-align: top;
 }
 
-.sittingCollaborate, .sittingCoach {
+.attendeeCollaborate, .attendeeCoach {
   display: inline-block;
   width: 130px;
   margin: 10px;
@@ -46,7 +46,7 @@
   vertical-align: top;
 }
 
-.sittingDestroy {
+.attendeeDestroy {
   display: inline-block;
   width: 100px;
   margin: 10px;

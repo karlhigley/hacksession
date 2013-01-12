@@ -1,6 +1,6 @@
 class CreateSittings < ActiveRecord::Migration
   def change
-    create_table :sittings do |t|
+    create_table :attendees do |t|
       t.string :person
       t.string :project
       t.boolean :collaborate

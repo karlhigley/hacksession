@@ -1,11 +1,11 @@
 = div_for(attendee) do |a|
-  .sittingName
+  .attendeeName
     = a.person
-  .sittingProject
+  .attendeeProject
     = a.project
-  .sittingCollaborate
+  .attendeeCollaborate
     = (a.collaborate ? 'Yes' : 'No')
-  .sittingCoach
+  .attendeeCoach
     = (a.coach ? 'Yes' : 'No')
-  .sittingDestroy
+  .attendeeDestroy
     = link_to 'X', url_for(attendee), :method => :delete

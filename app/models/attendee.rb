@@ -1,4 +1,4 @@
-class Sitting < ActiveRecord::Base
+class Attendee < ActiveRecord::Base
   validates_presence_of :person
   validates_uniqueness_of :person
 

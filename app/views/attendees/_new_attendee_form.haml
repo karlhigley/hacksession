@@ -1,7 +1,7 @@
 .form
-  = form_for(Sitting.new) do |f|
+  = form_for(Attendee.new) do |f|
     .formField
-      = f.label "Your Name"
+      = f.label "What's Your Name?"
       = f.text_field :person
     .formField
       = f.label "What Are You Working On?"

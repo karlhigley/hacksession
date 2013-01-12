@@ -11,9 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121221232738) do
+ActiveRecord::Schema.define(:version => 20130112004245) do
 
-  create_table "sittings", :force => true do |t|
+  create_table "attendees", :force => true do |t|
     t.string   "person"
     t.string   "project"
     t.boolean  "collaborate"
