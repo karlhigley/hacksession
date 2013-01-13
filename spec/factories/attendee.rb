@@ -4,8 +4,8 @@ FactoryGirl.define do
   factory :attendee do
     sequence(:person) { |n| "John Doe #{n}"}
     sequence(:project) { |n| "Project #{n}"}
-    collaborate false
-    coach false
+    sequence(:use_help) { |n| "Help With #{n}"}
+    sequence(:could_help) { |n| "Could Help #{n}"}
 
     factory :invalid_attendee do
       person ''

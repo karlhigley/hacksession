@@ -1,17 +1,17 @@
 .form
   = form_for(Attendee.new) do |f|
     .formField
-      = f.label "What's Your Name?"
+      = f.label "What's your name?"
       = f.text_field :person
     .formField
-      = f.label "What Are You Working On?"
+      = f.label "What are you working on?"
       = f.text_field :project
-    .formCheckbox
-      = f.label "Want Collaborators?"
-      = f.check_box :collaborate
-    .formCheckbox
-      = f.label "Willing to Coach?"
-      = f.check_box :coach
+    .formField
+      = f.label "What could you use help with?"
+      = f.text_field :use_help
+    .formField
+      = f.label "What could you help others with?"
+      = f.text_field :could_help
     .formField
       .formButton
         = f.submit "Get Started"

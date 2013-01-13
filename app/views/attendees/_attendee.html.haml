@@ -3,9 +3,9 @@
     = a.person
   .attendeeProject
     = a.project
-  .attendeeCollaborate
-    = (a.collaborate ? 'Yes' : 'No')
-  .attendeeCoach
-    = (a.coach ? 'Yes' : 'No')
-  .attendeeDestroy
+  .attendeeUseHelp
+    = a.use_help
+  .attendeeCouldHelp
+    = a.could_help
+  .attendeeDepart
     = link_to 'X', url_for(attendee), :method => :delete

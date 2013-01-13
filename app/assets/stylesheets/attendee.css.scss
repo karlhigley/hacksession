@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.attendee:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.attendee:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
 .form {
   vertical-align: top;
 }
@@ -30,7 +38,7 @@
   width: 100px;
 }
 
-.attendeeName, .attendeeProject {
+.attendeeName, .attendeeProject, .attendeeUseHelp, .attendeeCouldHelp {
   display: inline-block;
   width: 220px;
   margin: 10px;
@@ -38,15 +46,7 @@
   vertical-align: top;
 }
 
-.attendeeCollaborate, .attendeeCoach {
-  display: inline-block;
-  width: 130px;
-  margin: 10px;
-  text-align: center;
-  vertical-align: top;
-}
-
-.attendeeDestroy {
+.attendeeDepart {
   display: inline-block;
   width: 100px;
   margin: 10px;

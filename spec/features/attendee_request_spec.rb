@@ -1,13 +1,15 @@
 require 'spec_helper'
 
 describe 'Managing attendees' do
-  it 'lists attendees in progress' do
+  it 'lists attendees' do
     attendees = 2.times.collect { FactoryGirl.create(:attendee) }
 
     visit root_path
     attendees.each do |attendee|
       expect(page).to have_content attendee.person
       expect(page).to have_content attendee.project
+      expect(page).to have_content attendee.use_help
+      expect(page).to have_content attendee.could_help
     end
   end
 
@@ -23,7 +25,7 @@ describe 'Managing attendees' do
     expect(page).to have_content attributes[:project]
   end
 
-  it 'removes completed attendees' do
+  it 'removes departed attendees' do
     attendee = FactoryGirl.create(:attendee)
 
     expect{
