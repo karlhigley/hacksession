@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %title Hack Session
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = favicon_link_tag
+    = csrf_meta_tags
+
+  %body
+    #content
+      .header
+        %h2 Hack Session
+        %hr
+
+      = yield

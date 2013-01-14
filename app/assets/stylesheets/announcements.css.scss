@@ -1,0 +1,38 @@
+// Place all the styles related to the announcements controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.announcement {
+  .announcementContent {
+    display: inline-block;
+    width: 950px;
+    margin: 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .announcementDelete {
+    display: inline-block;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    vertical-align: top;
+  }
+}
+
+.announcementForm {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  textarea {
+    width: 700px;
+    resize: none;
+  }
+  .announcementContentField {
+    float: right;
+  }
+  .submitButton {
+    float: right;
+  }
+}
+

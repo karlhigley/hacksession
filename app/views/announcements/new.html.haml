@@ -1,0 +1,7 @@
+.announcementForm
+  = form_for(@announcement) do |f|
+    .announcementContentField
+      = f.label "Announcement:"
+      = f.text_area :content, :rows => '10'
+    .submitButton
+      = f.submit "Post announcement"

@@ -1,8 +1,9 @@
-.header
-  %h2 Hack Session
+.announcements
+  = render :partial => 'announcements/announcement', collection: @announcements
+  = link_to 'Post an announcement', {:action => 'new', :controller => 'announcements'}
   %hr
 
-.newAttendeeForm
+.attendeeForm
   = render :partial => 'attendees/new_attendee_form'
 .attendeeList
   = render :partial => 'attendees/attendee', collection: @attendees
