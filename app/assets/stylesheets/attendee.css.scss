@@ -9,48 +9,49 @@
   &:nth-child(odd) {
     background-color: #f0f0f0;
   }
+
+  .attendeeName, .attendeeProject, .attendeeUseHelp, .attendeeCouldHelp {
+    display: inline-block;
+    width: 220px;
+    margin: 10px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .attendeeDepart {
+    display: inline-block;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    vertical-align: top;
+  }
 }
 
-.form {
+.attendeeForm {
   vertical-align: top;
+
+  .attendeeFormField {
+    display: inline-block;
+    height: 65px;
+    margin: 10px;
+    vertical-align: top;
+    position: relative;
+  }
+
+  .attendeeFormCheckbox {
+    display: inline-block;
+    height: 65px;
+    margin: 10px;
+    vertical-align: top;
+    position: relative;
+    text-align: center;
+    width: 130px;
+  }
+
+  .attendeeFormButton {
+    position: absolute;
+    bottom: 15px;
+    width: 100px;
+  }
 }
 
-.formField {
-  display: inline-block;
-  height: 65px;
-  margin: 10px;
-  vertical-align: top;
-  position: relative;
-}
-
-.formCheckbox {
-  display: inline-block;
-  height: 65px;
-  margin: 10px;
-  vertical-align: top;
-  position: relative;
-  text-align: center;
-  width: 130px;
-}
-
-.formButton {
-  position: absolute;
-  bottom: 15px;
-  width: 100px;
-}
-
-.attendeeName, .attendeeProject, .attendeeUseHelp, .attendeeCouldHelp {
-  display: inline-block;
-  width: 220px;
-  margin: 10px;
-  text-align: left;
-  vertical-align: top;
-}
-
-.attendeeDepart {
-  display: inline-block;
-  width: 100px;
-  margin: 10px;
-  text-align: center;
-  vertical-align: top;
-}
