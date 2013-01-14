@@ -1,9 +1,12 @@
 .announcements
+  %h3 Announcements
   = render :partial => 'announcements/announcement', collection: @announcements
   = link_to 'Post an announcement', {:action => 'new', :controller => 'announcements'}
   %hr
 
-.attendeeForm
-  = render :partial => 'attendees/new_attendee_form'
-.attendeeList
-  = render :partial => 'attendees/attendee', collection: @attendees
+.attendees
+  %h3 Attendees
+  .attendeeForm
+    = render :partial => 'attendees/new_attendee_form'
+  .attendeeList
+    = render :partial => 'attendees/attendee', collection: @attendees

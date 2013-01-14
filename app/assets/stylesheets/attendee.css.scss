@@ -2,12 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.attendee:nth-child(even) {
-  background-color: #ffffff;
-}
-
-.attendee:nth-child(odd) {
-  background-color: #f0f0f0;
+.attendee {
+  &:nth-child(even) {
+    background-color: #ffffff;
+  }
+  &:nth-child(odd) {
+    background-color: #f0f0f0;
+  }
 }
 
 .form {
