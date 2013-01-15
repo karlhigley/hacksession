@@ -2,35 +2,24 @@ require 'spec_helper'
 
 describe 'Managing announcements' do
 
-  it 'displays announcements' do
-    announcements = 2.times.collect { FactoryGirl.create(:announcement) }
-
-    visit root_path
-    announcements.each do |announcement|
-      expect(page).to have_content announcement.content
-    end
+  before :all do
+    @announcement = FactoryGirl.create(:announcement)
   end
 
-  it 'adds a new announcement' do
+  it 'displays announcement text' do
+    visit root_path
+    expect(page).to have_content @announcement.content
+  end
+
+  it 'allows editing the announcement' do
     attributes = FactoryGirl.attributes_for(:announcement)
 
     visit root_path
-    click_link 'Post an announcement'
+    click_link 'Edit Announcement'
     fill_in 'announcement_content', :with => attributes[:content]
-    click_button 'Post announcement'
+    click_button 'Update Announcement'
 
     expect(page).to have_content attributes[:content]
-  end
-
-  it 'removes announcements' do
-    announcement = FactoryGirl.create(:announcement)
-
-    expect{
-      visit root_path
-      within '.announcement' do
-        click_on 'X'
-      end
-    }.to change(Announcement, :count).by(-1)
   end
 
 end

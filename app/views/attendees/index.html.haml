@@ -1,7 +1,7 @@
 .announcements
   %h3 Announcements
-  = render :partial => 'announcements/announcement', collection: @announcements
-  = link_to 'Post an announcement', {:action => 'new', :controller => 'announcements'}
+  = render :partial => 'announcements/announcement', object: @announcement
+  = link_to 'Edit Announcement', edit_announcement_path(@announcement)
   %hr
 
 .attendees

@@ -1,7 +1,5 @@
 class AttendeesController < ApplicationController
-
   def index
-    @announcements = Announcement.all
     @attendees = Attendee.all
   end
 
@@ -15,4 +13,5 @@ class AttendeesController < ApplicationController
     attendee.destroy if attendee
     redirect_to root_url
   end
+
 end

@@ -1,6 +1,12 @@
 require 'spec_helper'
 
 describe 'Managing attendees' do
+
+  before :all do
+    @announcement = FactoryGirl.create(:announcement)
+    puts "Before all announcement: #{@announcement.inspect}"
+  end
+
   it 'lists attendees' do
     attendees = 2.times.collect { FactoryGirl.create(:attendee) }
 
@@ -33,6 +39,6 @@ describe 'Managing attendees' do
       within '.attendee' do
         click_on 'X'
       end
-    }.to change(Attendee,:count).by(-1)
+    }.to change(Attendee, :count).by(-1)
   end
 end

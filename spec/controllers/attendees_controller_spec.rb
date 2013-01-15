@@ -9,6 +9,12 @@ describe AttendeesController do
       expect(assigns(:attendees)).to eq [attendee]
     end
 
+    it "populates an announcement" do
+      announcement = FactoryGirl.create(:announcement)
+      get :index
+      expect(assigns(:announcement)).to eq announcement
+    end
+
     it "renders the index view" do
       get :index
       expect(response).to render_template :index
