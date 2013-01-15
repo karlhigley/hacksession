@@ -2,23 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.announcement {
-  .announcementContent {
-    display: inline-block;
-    width: 950px;
-    margin: 10px;
-    text-align: left;
-    vertical-align: top;
-  }
 
-  .announcementDelete {
-    display: inline-block;
-    width: 100px;
+.announcement {
+  text-align: left;
+  display: inline-block;
+  .header h3 {
+    cursor: pointer;
+  }
+  .content {
     margin: 10px;
-    text-align: center;
-    vertical-align: top;
+    width: 950px;
   }
 }
+
 
 .announcementForm {
   width: 700px;

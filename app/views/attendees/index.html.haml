@@ -1,9 +1,6 @@
-.announcements
-  %h3 Announcements
-  = render :partial => 'announcements/announcement', object: @announcement
-  = link_to 'Edit Announcement', edit_announcement_path(@announcement)
-  %hr
+= render :partial => 'announcements/announcement', object: @announcement
 
+%hr
 .attendees
   %h3 Attendees
   .attendeeForm
