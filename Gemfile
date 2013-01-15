@@ -24,7 +24,8 @@ end
 
 gem 'haml-rails'
 gem 'jquery-rails'
-
+gem 'ember-rails'
+gem 'hamlbars'
 gem 'redcarpet'
 
 group :development, :test do
