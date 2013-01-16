@@ -1,4 +1,4 @@
-Hacksession.Router = Ember.Router.extend({
+HackSession.Router = Ember.Router.extend({
   location: 'hash',
 
   root: Ember.Route.extend({

@@ -1,3 +1,1 @@
-Hacksession.ApplicationView = Ember.View.extend({
-  templateName: 'application'
-});
+HackSession.ApplicationView = Ember.View.extend({});

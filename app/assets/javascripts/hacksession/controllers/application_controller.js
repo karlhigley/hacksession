@@ -1,3 +1,3 @@
-Hacksession.ApplicationController = Ember.Controller.extend({
+HackSession.ApplicationController = Ember.Controller.extend({
 
 });

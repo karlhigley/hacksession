@@ -24,9 +24,13 @@ end
 
 gem 'haml-rails'
 gem 'jquery-rails'
+gem 'handlebars-rails'
 gem 'ember-rails'
-gem 'hamlbars'
 gem 'redcarpet'
+
+group :development do
+  gem "pry"
+end
 
 group :development, :test do
   gem "rspec"

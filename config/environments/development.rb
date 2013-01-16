@@ -34,4 +34,7 @@ Hacksession::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Select an Ember.js variant
+  config.ember.variant = :development
 end
