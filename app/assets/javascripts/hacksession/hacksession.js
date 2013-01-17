@@ -1,3 +1,7 @@
+//= require handlebars
+//= require ember
+//= require ember-data
+//= require firehose
 //= require_tree ../markdown
 //= require_self
 //= require ./store

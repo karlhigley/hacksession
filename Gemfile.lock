@@ -53,13 +53,25 @@ GEM
       execjs
     coffee-script-source (1.4.0)
     commonjs (0.2.6)
+    cookiejar (0.3.0)
     database_cleaner (0.9.1)
     diff-lcs (1.1.3)
+    em-hiredis (0.1.1)
+      hiredis (~> 0.4.0)
+    em-http-request (1.0.3)
+      addressable (>= 2.2.3)
+      cookiejar
+      em-socksify
+      eventmachine (>= 1.0.0.beta.4)
+      http_parser.rb (>= 0.5.3)
+    em-socksify (0.2.1)
+      eventmachine (>= 1.0.0.beta.4)
     ember-rails (0.8.0)
       active_model_serializers
       execjs (>= 1.2)
       railties (~> 3.1)
     erubis (2.7.0)
+    eventmachine (1.0.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
     factory_girl (4.1.0)
@@ -67,7 +79,19 @@ GEM
     factory_girl_rails (4.1.0)
       factory_girl (~> 4.1.0)
       railties (>= 3.0.0)
+    faraday (0.8.4)
+      multipart-post (~> 1.1)
+    faye-websocket (0.4.6)
+      eventmachine (>= 0.12.0)
     ffi (1.3.1)
+    firehose (1.1.0)
+      em-hiredis
+      em-http-request (~> 1.0.0)
+      eventmachine (>= 1.0.0.rc)
+      faraday
+      faye-websocket
+      json
+      thor
     haml (3.1.7)
     haml-rails (0.3.5)
       actionpack (>= 3.1, < 4.1)
@@ -81,12 +105,15 @@ GEM
       handlebars (~> 0.3.2)
       rails (~> 3.0)
     hike (1.2.1)
+    hiredis (0.4.5)
+    http_parser.rb (0.5.3)
     i18n (0.6.1)
     journey (1.0.4)
     jquery-rails (2.1.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.7.6)
+    kgio (2.7.4)
     libv8 (3.11.8.13)
     libwebsocket (0.1.7.1)
       addressable
@@ -98,6 +125,7 @@ GEM
     method_source (0.8.1)
     mime-types (1.19)
     multi_json (1.5.0)
+    multipart-post (1.1.5)
     newrelic_rpm (3.5.5.38)
     nokogiri (1.5.6)
     pg (0.14.1)
@@ -128,6 +156,11 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
+    rainbows (4.4.2)
+      kgio (~> 2.5)
+      rack (~> 1.1)
+      unicorn (~> 4.1)
+    raindrops (0.10.0)
     rake (10.0.3)
     rdoc (3.12)
       json (~> 1.4)
@@ -177,6 +210,10 @@ GEM
     uglifier (1.3.0)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    unicorn (4.5.0)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
     websocket (1.0.6)
     xpath (1.0.0)
       nokogiri (~> 1.3)
@@ -191,6 +228,7 @@ DEPENDENCIES
   database_cleaner
   ember-rails
   factory_girl_rails
+  firehose
   haml-rails
   handlebars-rails
   jquery-rails
@@ -198,6 +236,7 @@ DEPENDENCIES
   pg
   pry
   rails (= 3.2.11)
+  rainbows
   redcarpet
   rspec
   rspec-rails
