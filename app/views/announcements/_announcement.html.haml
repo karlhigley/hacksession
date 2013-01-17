@@ -6,8 +6,7 @@
   .content
     %script{:type => "text/x-handlebars", :'data-template-name' => 'announcement'}
       {{#each controller}}
-      {{content}}
+      {{{markdownContent}}}
       {{/each}}
-    =# markdown @announcement.content
     .link
       = link_to 'Edit Announcement', edit_announcement_path(@announcement)

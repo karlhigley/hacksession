@@ -1,0 +1,1 @@
+HackSession.AnnouncementsController = Ember.ArrayController.extend();
