@@ -1,0 +1,1 @@
+HackSession.AttendeesController = Ember.ArrayController.extend();

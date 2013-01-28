@@ -8,4 +8,16 @@
   .attendeeForm
     = render :partial => 'attendees/new_attendee_form'
   .attendeeList
-    = render :partial => 'attendees/attendee', collection: @attendees
+    =# render :partial => 'attendees/attendee', collection: @attendees
+    %script{:type => "text/x-handlebars", :'data-template-name' => 'attendees'}
+      = hb 'each controller' do
+        .attendee
+          .attendeeName
+            = hb 'person'
+          .attendeeProject
+            = hb 'project'
+          .attendeeUseHelp
+            = hb 'useHelp'
+          .attendeeCouldHelp
+            = hb 'couldHelp'
+          .attendeeDepart

@@ -13,6 +13,7 @@ end
 gem 'haml-rails'
 gem 'jquery-rails'
 gem 'handlebars-rails'
+gem 'hamlbars'
 gem 'ember-rails'
 gem 'redcarpet'
 

@@ -18,6 +18,7 @@ HackSession = Ember.Application.create({
 
 $(function() {
   HackSession.store = HackSession.Store.create();
+
   var announcementsController = HackSession.AnnouncementsController.create({
     content: HackSession.Announcement.find()
   });
@@ -25,4 +26,12 @@ $(function() {
     controller: announcementsController
   });
   announcementView.appendTo('.announcement .content');
+
+  var attendeesController = HackSession.AttendeesController.create({
+    content: HackSession.Attendee.find()
+  });
+  var attendeesView = HackSession.AttendeesView.create({
+    controller: attendeesController
+  });
+  attendeesView.appendTo('.attendees .attendeeList');
 });
