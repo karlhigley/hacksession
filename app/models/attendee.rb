@@ -9,5 +9,9 @@ class Attendee < ActiveRecord::Base
     req = Net::HTTP::Put.new("/attendees/#{id}/firehose.json")
     req.body = to_json
     Net::HTTP.start('127.0.0.1', 7474).request(req)
+
+    req = Net::HTTP::Put.new("/attendees/firehose.json")
+    req.body = to_json
+    Net::HTTP.start('127.0.0.1', 7474).request(req)
   end
 end

@@ -8,6 +8,14 @@ class AttendeesController < ApplicationController
     end
   end
 
+  def show
+    @attendee = Attendee.find(params[:id])
+
+    respond_to do |format|
+      format.json { render json: @attendee }
+    end
+  end
+
   def create
     @attendee = Attendee.create(params[:attendee])
 

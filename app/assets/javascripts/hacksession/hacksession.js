@@ -30,6 +30,7 @@ $(function() {
   var attendeesController = HackSession.AttendeesController.create({
     content: HackSession.Attendee.find()
   });
+  attendeesController.setupFirehose();
   var attendeesView = HackSession.AttendeesView.create({
     controller: attendeesController
   });

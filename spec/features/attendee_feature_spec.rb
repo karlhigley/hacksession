@@ -6,7 +6,7 @@ describe 'Managing attendees' do
     @announcement = FactoryGirl.create(:announcement)
   end
 
-  it 'lists attendees' do
+  it 'lists attendees', js: true do
     attendees = 2.times.collect { FactoryGirl.create(:attendee) }
 
     visit root_path
@@ -18,7 +18,7 @@ describe 'Managing attendees' do
     end
   end
 
-  it 'adds a new attendee' do
+  it 'adds a new attendee', js: true do
     attributes = FactoryGirl.attributes_for(:attendee)
 
     visit root_path
@@ -30,7 +30,7 @@ describe 'Managing attendees' do
     expect(page).to have_content attributes[:project]
   end
 
-  it 'removes departed attendees' do
+  it 'removes departed attendees', js: true do
     attendee = FactoryGirl.create(:attendee)
 
     expect{

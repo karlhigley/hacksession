@@ -7,8 +7,8 @@ HackSession.Announcement = DS.Model.extend({
   setupFirehose: function() {
     if (this.get('isLoaded') == true){
       model = this;
-      this.firehoseStream = new Firehose.Consumer({
-        uri: '//localhost:7474/announcements/' + this.get('id') + '/firehose.json',
+      model.firehoseStream = new Firehose.Consumer({
+        uri: '//localhost:7474/announcements/' + model.get('id') + '/firehose.json',
         message: function(json){
           model.set('content', json.announcement.content);
         }
