@@ -9,8 +9,14 @@
 
   %body
     #content
+      #account_links{:style => 'float: right;'}
+        = render :partial => 'shared/account_links'
       .header
         %h1 Hack Session
         %hr
+        - if notice
+          .notice.alert.alert-info= notice
+        - if alert
+          .alert= alert
 
       = yield
