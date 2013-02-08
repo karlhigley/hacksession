@@ -12,11 +12,15 @@
     = f.email_field :email
 
   %div
+    = f.label :twitter, 'Twitter Handle'
+    = f.text_field :twitter
+
+  %div
     = f.label :password
     = f.password_field :password
 
   %div
-    = f.label :password_confirmation
+    = f.label :password_confirmation, "Password Confirmation"
     = f.password_field :password_confirmation
 
   %div
