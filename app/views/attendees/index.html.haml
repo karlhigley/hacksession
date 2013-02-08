@@ -3,7 +3,8 @@
 %hr
 .attendees
   %h3 Attendees
-  .attendeeForm
-    = render :partial => 'attendees/new_attendee_form'
+  - unless user_signed_in? && current_user.attendee
+    .attendeeForm
+      = render :partial => 'attendees/new_attendee_form'
   .attendeeList
     = render :partial => 'attendees/attendee', collection: @attendees
