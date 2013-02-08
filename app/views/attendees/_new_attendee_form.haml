@@ -1,16 +1,16 @@
 .attendeeForm
   = form_for(Attendee.new) do |f|
     .attendeeFormField
-      = f.label "What's your name?"
-      = f.text_field :person
+      = f.label :person, "What's your name?"
+      = f.text_field :person, :value => @default_name
     .attendeeFormField
-      = f.label "What are you working on?"
+      = f.label :project, "What are you working on?"
       = f.text_field :project
     .attendeeFormField
-      = f.label "What could you use help with?"
+      = f.label :use_help, "What could you use help with?"
       = f.text_field :use_help
     .attendeeFormField
-      = f.label "What could you help others with?"
+      = f.label :could_help, "What could you help others with?"
       = f.text_field :could_help
     .attendeeFormField
       .attendeeFormButton

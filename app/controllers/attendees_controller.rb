@@ -1,10 +1,15 @@
 class AttendeesController < ApplicationController
   def index
     @attendees = Attendee.all
+    @default_name = user_signed_in? ? current_user.name : ''
   end
 
   def create
-    Attendee.create(params[:attendee])
+    attendee = Attendee.create(params[:attendee])
+    if user_signed_in?
+      current_user.attendee = attendee
+      current_user.save
+    end
     redirect_to root_url
   end
 

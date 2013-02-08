@@ -1,6 +1,9 @@
 = div_for(attendee) do |a|
   .attendeeName
-    = a.person
+    - if a.twitter_handle
+      = link_to a.person, "http://twitter.com/#{a.twitter_handle}"
+    - else
+      = a.person
   .attendeeProject
     = a.project
   .attendeeUseHelp

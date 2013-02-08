@@ -24,8 +24,9 @@ end
 
 gem 'haml-rails'
 gem 'jquery-rails'
-
 gem 'redcarpet'
+
+gem 'devise'
 
 group :development, :test do
   gem "rspec"

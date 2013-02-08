@@ -5,4 +5,5 @@
       %i.icon-eye-open
   .content
     = markdown @announcement.content
-    = link_to 'Edit Announcement', edit_announcement_path(@announcement)
+    - if user_signed_in?
+      = link_to 'Edit Announcement', edit_announcement_path(@announcement)

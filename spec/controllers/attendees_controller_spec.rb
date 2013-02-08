@@ -47,6 +47,15 @@ describe AttendeesController do
         expect(response).to redirect_to root_url
       end
     end
+
+    context "when logged in" do
+      it "associates the new attendee with the current user" do
+        user = FactoryGirl.create(:user)
+        sign_in user
+        post :create, attendee: FactoryGirl.attributes_for(:attendee)
+        expect(Attendee.last.user_id).to eq user.id
+      end
+    end
   end
 
   describe 'DELETE #destroy' do
