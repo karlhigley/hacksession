@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130206203032) do
+ActiveRecord::Schema.define(:version => 20130208023046) do
 
   create_table "announcements", :force => true do |t|
     t.text     "content"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20130206203032) do
     t.datetime "updated_at", :null => false
     t.string   "use_help"
     t.string   "could_help"
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|

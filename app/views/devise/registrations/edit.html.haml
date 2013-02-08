@@ -6,8 +6,16 @@
   = devise_error_messages!
 
   %div
+    = f.label :name
+    = f.text_field :name
+
+  %div
     = f.label :email
     = f.email_field :email, :autofocus => true
+
+  %div
+    = f.label :twitter, 'Twitter Handle'
+    = f.text_field :twitter
 
   - if devise_mapping.confirmable? && resource.pending_reconfirmation?
     %div

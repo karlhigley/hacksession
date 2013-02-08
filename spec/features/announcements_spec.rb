@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'Managing announcements' do
 
-  before :all do
+  before :each do
     @announcement = FactoryGirl.create(:announcement)
   end
 
