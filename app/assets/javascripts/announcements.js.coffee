@@ -3,8 +3,8 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $(->
-  $('.announcement').bind('click', ->
-    $(this).find('.content').toggle()
+  $('.announcement .header').bind('click', ->
+    $(this).parent('.announcement').find('.content').toggle()
     $(this).find('i').toggleClass('icon-eye-open').toggleClass('icon-eye-close')
   )
 )
