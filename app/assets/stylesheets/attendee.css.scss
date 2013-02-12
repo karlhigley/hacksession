@@ -10,14 +10,6 @@
     background-color: #f0f0f0;
   }
 
-  .attendeeName, .attendeeProject, .attendeeUseHelp, .attendeeCouldHelp {
-    display: inline-block;
-    width: 220px;
-    margin: 10px;
-    text-align: left;
-    vertical-align: top;
-  }
-
   .attendeeDepart {
     display: inline-block;
     width: 100px;
@@ -61,3 +53,10 @@
   }
 }
 
+.attendeeName, .attendeeProject, .attendeeUseHelp, .attendeeCouldHelp {
+  display: inline-block;
+  width: 220px;
+  margin: 10px;
+  text-align: left;
+  vertical-align: top;
+}
