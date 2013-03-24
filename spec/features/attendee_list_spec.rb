@@ -9,7 +9,8 @@ describe 'Managing attendees' do
   it 'lists attendees' do
     attendees = 2.times.collect { FactoryGirl.create(:attendee) }
 
-    visit root_path
+    visit attendees_path
+
     attendees.each do |attendee|
       expect(page).to have_content attendee.person
       expect(page).to have_content attendee.project
@@ -19,9 +20,9 @@ describe 'Managing attendees' do
   end
 
   it 'adds a new attendee' do
-    attributes = FactoryGirl.attributes_for(:attendee)
+    visit attendees_path
 
-    visit root_path
+    attributes = FactoryGirl.attributes_for(:attendee)
     fill_in 'attendee_person', :with => attributes[:person]
     fill_in 'attendee_project', :with => attributes[:project]
     click_button 'Get Started'
@@ -34,7 +35,7 @@ describe 'Managing attendees' do
     attendee = FactoryGirl.create(:attendee)
 
     expect{
-      visit root_path
+      visit attendees_path
       within '.attendee' do
         click_on 'X'
       end
@@ -45,7 +46,7 @@ describe 'Managing attendees' do
     before :each do
       @user = FactoryGirl.create(:user)
       login_as(@user, :scope => :user)
-      visit root_path
+      visit attendees_path
     end
 
     it 'autofills the name field' do

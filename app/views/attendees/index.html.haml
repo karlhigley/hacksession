@@ -1,11 +1,16 @@
-= render :partial => 'announcements/announcement', object: @announcement
+#tabs
+  %ul.nav.nav-tabs
+    %li
+      %a{:href => "#{announcements_path}"} Announcements
+    %li.active
+      %a{:href => "#{attendees_path}"} Attendees
+#attendees.tab-contents
+  .attendees
+    - if user_signed_in? && current_user.attendee
+      = render :partial => 'attendees/attendee_labels'
+    - else
+      .attendeeForm
+        = render :partial => 'attendees/new_attendee_form'
+    .attendeeList
+      = render :partial => 'attendees/attendee', collection: @attendees
 
-%hr
-.attendees
-  %h3 Attendees
-  - if user_signed_in? && current_user.attendee
-    = render :partial => 'attendees/attendee_labels'
-  - else
-    = render :partial => 'attendees/new_attendee_form'
-  .attendeeList
-    = render :partial => 'attendees/attendee', collection: @attendees

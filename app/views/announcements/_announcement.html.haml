@@ -1,9 +1,4 @@
 .announcement
-  .header
-    %h3
-      Announcements
-      %i.icon-eye-open
-  .content
-    = markdown @announcement.content
-    - if user_signed_in?
-      = link_to 'Edit Announcement', edit_announcement_path(@announcement)
+  = markdown @announcement.content
+  - if user_signed_in?
+    = link_to 'Edit Announcement', edit_announcement_path(@announcement)

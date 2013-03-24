@@ -1,0 +1,8 @@
+#tabs
+  %ul.nav.nav-tabs
+    %li.active
+      %a{:href => "#{announcements_path}"} Announcements
+    %li
+      %a{:href => "#{attendees_path}"} Attendees
+#announcements
+  = render :partial => 'announcements/announcement', object: @announcement

@@ -31,7 +31,7 @@ describe AttendeesController do
 
       it "redirects to the home page" do
         post :create, attendee: FactoryGirl.attributes_for(:attendee)
-        expect(response).to redirect_to root_url
+        expect(response).to redirect_to attendees_url
       end
     end
 
@@ -44,7 +44,7 @@ describe AttendeesController do
 
       it "redirects to the home page" do
         post :create, attendee: FactoryGirl.attributes_for(:invalid_attendee)
-        expect(response).to redirect_to root_url
+        expect(response).to redirect_to attendees_url
       end
     end
 
@@ -71,7 +71,7 @@ describe AttendeesController do
 
     it "redirects to the home page" do
       delete :destroy, id: @attendee
-      expect(response).to redirect_to root_url
+      expect(response).to redirect_to attendees_url
     end
   end
 

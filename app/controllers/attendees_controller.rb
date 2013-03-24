@@ -10,13 +10,13 @@ class AttendeesController < ApplicationController
       current_user.attendee = attendee
       current_user.save
     end
-    redirect_to root_url
+    redirect_to attendees_path
   end
 
   def destroy
     attendee = Attendee.find(params[:id])
     attendee.destroy if attendee
-    redirect_to root_url
+    redirect_to attendees_path
   end
 
 end
