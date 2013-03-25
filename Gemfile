@@ -7,7 +7,7 @@ gem 'rails', '3.2.11'
 
 # gem 'sqlite3'
 
-gem 'sqlite3'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -29,6 +29,7 @@ gem 'redcarpet'
 gem 'devise'
 
 group :development, :test do
+  gem 'sqlite3'
   gem "rspec"
   gem "rspec-rails"
   gem "factory_girl_rails"
@@ -40,6 +41,7 @@ group :test do
 end
 
 group :production do
+  gem 'pg'
   gem 'newrelic_rpm'
 end
 
